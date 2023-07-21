@@ -6,9 +6,9 @@ function Second(props) {
         <h2 className='text-center monu my-3 success mx-3' style={{textAlign:"right", fontFamily: "Piazzolla", margin:"none", padding:"none",fontSize:"25px"}} >
             {props.high}
         </h2>
-        <h2 className='text-center size-dec success mx-3' style={{textAlign:"right", fontFamily: "Piazzolla", margin:"none", padding:"none",fontSize:"25px"}} >
-            {props.high}
-        </h2>
+        <h2 style={{textAlign:"right",fontFamily: "Piazzolla", margin:"none",padding:"none"}} className='size-dec text-center monu Success mx-3' >
+            Vol: { props.volume}
+            </h2> 
 
     </div>
   )
