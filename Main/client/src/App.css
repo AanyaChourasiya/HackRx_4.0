@@ -1,6 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Piazzolla:opsz,wght@8..30,200;8..30,300;8..30,400;8..30,900&display=swap');
+
+*{
+    font-family: 'Piazzolla';
+}
+
 .App {
   text-align: center;
 }
+
+.size-dec{
+  font-size: 18px;
+}
+
+.width-auto{
+  width: 300px;
+  background: transparent;
+}
+
+
+.colo{
+  color: rgba(48, 247, 3, 0.81);
+  font-size:medium;
+  font-weight: bold;
+}
+
+.monu{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.molo{
+  color: rgb(150, 194, 6);
+}
+
+.rolo{
+  font-size:small;
+  font-weight:normal;
+}
+
 
 .App-logo {
   height: 40vmin;
