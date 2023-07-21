@@ -12,5 +12,5 @@ const SampleSchema = new mongoose.Schema({
     symbol : String
 })
 
-const SampleModel = mongoose.model("Sample","SampleSchema")
+const SampleModel = mongoose.model("Sample",SampleSchema)
 module.exports = SampleModel
