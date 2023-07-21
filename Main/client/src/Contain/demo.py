@@ -64,7 +64,6 @@ num_bars_input = html.Div([
 ])
 
 app.layout = html.Div([
-    html.H1('CandleStick Chart'),
 
     dbc.Row([
         dbc.Col(symbol_dropdown),

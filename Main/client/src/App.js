@@ -1,18 +1,30 @@
 import './App.css';
-import Dashboard from './Contain/Dashboard';
+import CandlestickGraph from './Contain/CandlestickGraph';
+// import Dashboard from './Contain/Dashboard';
 import First from './Contain/First';
 import FirstNav from './Contain/FirstNav';
 import Navigation from './Contain/Navigation';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route
+}
+  from 'react-router-dom';
+
 
 function App() {
   return (
     <div className="App">
-      <Navigation/>
-      <FirstNav/>
       
-      <First/>
-
-      <Dashboard/>
+     <Router>
+       <Navigation/>
+       <FirstNav/>
+         <Routes>
+           <Route path="/" element={<First />} />
+           <Route path="/dash" element={ <CandlestickGraph/> } />
+         </Routes>
+       </Router>
+    
       
     </div>
   );
