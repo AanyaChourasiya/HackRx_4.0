@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Second from './Second';
 
 function First() {
     
@@ -36,7 +37,6 @@ function First() {
     </th>
     <th scope="row" style={{background:"transparent"}} className='width-auto'>
           <Second high={product.high} volume = {product.volume}/>
-         
     </th>
   </tr> 
         </tbody>
@@ -55,8 +55,3 @@ function First() {
 
 export default First
 
-
-
-
- {/* <h2 style={{textAlign:"right", margin:"none",padding:"none",fontSize:"25px"}} className='text-center monu Success mx-3' >{ product.high }</h2>   
-          <h2 style={{textAlign:"right", margin:"none",padding:"none"}} className='size-dec text-center monu Success mx-3' >Vol: { product.volume}</h2>    */}
