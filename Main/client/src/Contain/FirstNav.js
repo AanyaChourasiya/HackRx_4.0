@@ -15,6 +15,10 @@ function FirstNav() {
         <Link className="nav-link active" aria-current="page" to="/dash">Dashboard</Link>
         
       </div>
+      <div className="navbar-nav">
+        <Link className="nav-link active" aria-current="page" to="/real">Real Time Chart</Link>
+        
+      </div>
     </div>
   </div>
 </nav>

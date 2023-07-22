@@ -11,6 +11,7 @@ import {
   Route
 }
   from 'react-router-dom';
+import RealTime from './Contain/RealTime';
 
 
 function App() {
@@ -23,10 +24,9 @@ function App() {
          <Routes>
            <Route path="/" element={<First />} />
            <Route path="/dash" element={ <Dashboard/> } />
-           <Route path="/dash" element={ <RealTime/> } />
+           <Route path="/real" element={ <RealTime/> } />
          </Routes>
        </Router>
-    
       
     </div>
   );
