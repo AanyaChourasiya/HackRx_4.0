@@ -55,15 +55,11 @@ def main():
 
     # Create a multiselect to select multiple symbols
     selected_symbols = st.multiselect('Select Symbols', 
-                                      ['BHARTIARTL', 'POWERGRID', 'ICICIBANK', 'ASIANPAINT', 'BRITANNIA', 'INFY', 'NTPC', 'CIPLA', 'ONGC', 'HDFCBANK', 
-                                       'SUNPHARMA', 'EICHERMOT', 'TECHM', 'M&M', 'AXISBANK', 'RELIANCE', 'WIPRO', 'HINDALCO', 'HINDUNILVR', 'SBILIFE', 
-                                       'ULTRACEMCO', 'APOLLOHOSP', 'HDFC', 'BAJAJFINSV', 'COALINDIA', 'DRREDDY', 'ITC', 'HEROMOTOCO', 'DIVISLAB', 'GRASIM', 
-                                       'HCLTECH', 'TCS', 'UPL', 'KOTAKBANK', 'TATACONSUM', 'INDUSINDBK', 'JSWSTEEL', 'LT', 'SBIN', 'TATAMOTORS', 'HDFCLIFE', 
-                                       'MARUTI', 'BPCL', 'TITAN', 'BAJFINANCE', 'ADANIPORTS', 'NESTLEIND', 'TATASTEEL', 'ADANIENT', 'BAJAJ-AUTO'])
+                                      ['ADANIENT', 'ADANIPORTS', 'APOLLOHOSP', 'ASIANPAINT', 'AXISBANK', 'BAJAJ-AUTO', 'BAJAJFINSV', 'BAJFINANCE', 'BHARTIARTL', 'BPCL', 'BRITANNIA', 'CIPLA', 'COALINDIA', 'DIVISLAB', 'DRREDDY', 'EICHERMOT', 'GRASIM', 'HCLTECH', 'HDFC', 'HDFCBANK', 'HDFCLIFE', 'HEROMOTOCO', 'HINDALCO', 'HINDUNILVR', 'ICICIBANK', 'INDUSINDBK', 'INFY', 'ITC', 'JSWSTEEL', 'KOTAKBANK', 'LT', 'M&M', 'MARUTI', 'NESTLEIND', 'NTPC', 'ONGC', 'POWERGRID', 'RELIANCE', 'SBILIFE', 'SBIN', 'SUNPHARMA', 'TATACONSUM', 'TATAMOTORS', 'TATASTEEL', 'TCS', 'TECHM', 'TITAN', 'ULTRACEMCO', 'UPL', 'WIPRO'])
 
     # Update the candlestick chart for each selected symbol
     for symbol in selected_symbols:
-        st.subheader(f'Candlestick Chart for {symbol}')
+        # st.subheader(f'Candlestick Chart for {symbol}')
         update_candlestick_chart(symbol)
         time.sleep(5)  # Adjust the interval as needed
 
