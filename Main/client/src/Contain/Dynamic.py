@@ -3,6 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import mplfinance as mpf
 import streamlit as st
+import time
 
 # Function to read data from MongoDB and create the DataFrame
 def read_data_from_mongodb(symbol):
@@ -29,17 +30,8 @@ def read_data_from_mongodb(symbol):
 
     return df
 
-# Streamlit app
-def main():
-    st.title('Candlestick Chart for Stock Data')
-
-    # Create a dropdown to select the symbol
-    symbol = st.selectbox('Select a Symbol', ['BHARTIARTL', 'POWERGRID', 'ICICIBANK', 'ASIANPAINT', 'BRITANNIA', 'INFY', 'NTPC', 'CIPLA', 'ONGC', 'HDFCBANK', 
-           'SUNPHARMA', 'EICHERMOT', 'TECHM', 'M&M', 'AXISBANK', 'RELIANCE', 'WIPRO', 'HINDALCO', 'HINDUNILVR', 'SBILIFE', 
-           'ULTRACEMCO', 'APOLLOHOSP', 'HDFC', 'BAJAJFINSV', 'COALINDIA', 'DRREDDY', 'ITC', 'HEROMOTOCO', 'DIVISLAB', 'GRASIM', 
-           'HCLTECH', 'TCS', 'UPL', 'KOTAKBANK', 'TATACONSUM', 'INDUSINDBK', 'JSWSTEEL', 'LT', 'SBIN', 'TATAMOTORS', 'HDFCLIFE', 
-           'MARUTI', 'BPCL', 'TITAN', 'BAJFINANCE', 'ADANIPORTS', 'NESTLEIND', 'TATASTEEL', 'ADANIENT', 'BAJAJ-AUTO'])  # Add more symbols if needed
-
+# Function to update the candlestick chart
+def update_candlestick_chart(symbol):
     # Read data from MongoDB for the selected symbol
     data = read_data_from_mongodb(symbol)
 
@@ -56,6 +48,24 @@ def main():
 
     # Show the interactive candlestick chart in Streamlit
     st.write(fig)
+
+# Streamlit app
+def main():
+    st.title('Real-time Candlestick Chart for Stock Data')
+
+    # Create a multiselect to select multiple symbols
+    selected_symbols = st.multiselect('Select Symbols', 
+                                      ['BHARTIARTL', 'POWERGRID', 'ICICIBANK', 'ASIANPAINT', 'BRITANNIA', 'INFY', 'NTPC', 'CIPLA', 'ONGC', 'HDFCBANK', 
+                                       'SUNPHARMA', 'EICHERMOT', 'TECHM', 'M&M', 'AXISBANK', 'RELIANCE', 'WIPRO', 'HINDALCO', 'HINDUNILVR', 'SBILIFE', 
+                                       'ULTRACEMCO', 'APOLLOHOSP', 'HDFC', 'BAJAJFINSV', 'COALINDIA', 'DRREDDY', 'ITC', 'HEROMOTOCO', 'DIVISLAB', 'GRASIM', 
+                                       'HCLTECH', 'TCS', 'UPL', 'KOTAKBANK', 'TATACONSUM', 'INDUSINDBK', 'JSWSTEEL', 'LT', 'SBIN', 'TATAMOTORS', 'HDFCLIFE', 
+                                       'MARUTI', 'BPCL', 'TITAN', 'BAJFINANCE', 'ADANIPORTS', 'NESTLEIND', 'TATASTEEL', 'ADANIENT', 'BAJAJ-AUTO'])
+
+    # Update the candlestick chart for each selected symbol
+    for symbol in selected_symbols:
+        st.subheader(f'Candlestick Chart for {symbol}')
+        update_candlestick_chart(symbol)
+        time.sleep(5)  # Adjust the interval as needed
 
 if __name__ == '__main__':
     main()
