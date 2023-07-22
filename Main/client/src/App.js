@@ -23,6 +23,7 @@ function App() {
          <Routes>
            <Route path="/" element={<First />} />
            <Route path="/dash" element={ <Dashboard/> } />
+           <Route path="/dash" element={ <RealTime/> } />
          </Routes>
        </Router>
     
