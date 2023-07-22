@@ -4,7 +4,7 @@ const Dashboard = () => {
   return (
     <div>
       <iframe
-        src="http://127.0.0.1:8050/"
+        src="http://localhost:8502/"
         width="100%"
         height="500px"
         title="Dashboard"

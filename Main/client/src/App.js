@@ -1,5 +1,6 @@
 import './App.css';
-import CandlestickGraph from './Contain/CandlestickGraph';
+// import CandlestickGraph from './Contain/CandlestickGraph';
+import Dashboard from './Contain/Dashboard';
 // import Dashboard from './Contain/Dashboard';
 import First from './Contain/First';
 import FirstNav from './Contain/FirstNav';
@@ -21,7 +22,7 @@ function App() {
        <FirstNav/>
          <Routes>
            <Route path="/" element={<First />} />
-           <Route path="/dash" element={ <CandlestickGraph/> } />
+           <Route path="/dash" element={ <Dashboard/> } />
          </Routes>
        </Router>
     

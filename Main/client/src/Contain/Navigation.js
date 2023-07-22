@@ -33,11 +33,11 @@ function Navigation() {
         </li>
         <div className="Success">
         <li className="nav-item">
-          <a className=" colo nav-link " href="#">19,711.45</a>
+          <a className=" colo nav-link " href="#">19,745.00</a>
         </li>
         </div>
         <li className="nav-item">
-          <a className="nav-link rolo  " href="#">+146.95(0.75%) </a>
+          <a className="nav-link rolo  " href="#">-234.15(1.17%) </a>
         </li>
         
         <li className="nav-item">
@@ -45,11 +45,11 @@ function Navigation() {
         </li>
         <div className="Success">
         <li className="nav-item">
-          <a className="colo nav-link " href="#">66,589.93</a>
+          <a className="colo nav-link " href="#">66,684.26</a>
         </li>
         </div>
         <li className="nav-item rolo ">
-          <a className="nav-link" href="#">+529.03(0.80%)</a>
+          <a className="nav-link " href="#">-887.64(1.31%)</a>
         </li>
        
       </ul>
