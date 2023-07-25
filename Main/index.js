@@ -25,7 +25,6 @@ app.get('/getSample', async (req,res)=>{
     }
 })
 
-
 app.get('/getSample/name/:name', async (req,res)=>{
     try{
         const name = req.params.name;
@@ -46,9 +45,6 @@ app.get('/getSample/:tradeDate', async (req,res)=>{
         res.send(err)
     }
 })
-
-
-
 
 app.listen(80,()=>{
     console.log("server is running")

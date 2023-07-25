@@ -14,7 +14,6 @@ TIMEFRAMES = ['D5', 'D10', 'D15', 'D20', 'D25', 'MN1', 'W5', 'W6', 'W7']
 
 # Define the TIMEFRAME_DICT to map human-readable labels to timeframe values
 TIMEFRAME_DICT = {
-
      '05 Days': 'D5',
     '10 Days': 'D10',
     '15 Days': 'D15',

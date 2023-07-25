@@ -82,8 +82,6 @@
 # if __name__ == '__main__':
 #     main()
 
-
-
 import streamlit as st
 import os
 from PIL import Image

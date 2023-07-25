@@ -19,7 +19,6 @@ function First() {
     
       console.log(products);
 
-
     return (    
         <>
     <div>
@@ -49,9 +48,7 @@ function First() {
         
   </div>
 </>
-
   )
 }
 
 export default First
-
